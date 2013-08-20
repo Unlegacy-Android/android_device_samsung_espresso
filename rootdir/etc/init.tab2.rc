@@ -103,6 +103,9 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
 on boot
+# Prevents permission denied error for telephony
+    chmod 0444 /proc/cmdline
+
 # initialize the SGX driver
 service pvrsrvinit /system/bin/pvrsrvinit
     class core
