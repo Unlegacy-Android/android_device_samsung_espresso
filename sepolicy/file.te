@@ -1,1 +1,4 @@
 type firmware_ducati, file_type;
+
+# Support asec containers getting mounted
+allow file_type rootfs:filesystem associate;
