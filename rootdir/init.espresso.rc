@@ -167,6 +167,10 @@ service dock_kbd_attach /system/bin/dock_kbd_attach /dev/ttyO3
     user root
     oneshot
 
+# stop ril-daemon for wifi-only device
+on property:ro.carrier=wifi-only
+    stop ril-daemon
+
 # LPM
 on property:ro.bootmode=charger
     mount ext4 /dev/block/platform/omap/omap_hsmmc.1/by-name/FACTORYFS /system wait ro
