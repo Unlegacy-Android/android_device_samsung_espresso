@@ -15,6 +15,7 @@ on fs
     mkdir /efs 0775 radio system
 
     mount_all /fstab.espresso
+    swapon_all /fstab.espresso
 
     restorecon_recursive /efs
 
