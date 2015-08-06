@@ -42,6 +42,7 @@
 
 # System binaries
 /system/bin/pvrsrvinit                      u:object_r:pvrsrvinit_exec:s0
+/system/bin/sysinit                         u:object_r:sysinit_exec:s0
 /system/vendor/bin/pvrsrvctl_SGX540_120     u:object_r:pvrsrvinit_exec:s0
 
 # Firmwares
