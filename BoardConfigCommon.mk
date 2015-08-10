@@ -53,8 +53,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # F2FS filesystem
 TARGET_USERIMAGES_USE_F2FS := true
 
-# Egl
-BOARD_EGL_CFG := device/samsung/espresso-common/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_BOOTANIMATION_PRELOAD := true
 
