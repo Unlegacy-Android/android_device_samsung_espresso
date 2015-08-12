@@ -51,7 +51,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Egl
-BOARD_EGL_CFG := device/samsung/p3100/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/espresso-common/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_BOOTANIMATION_PRELOAD := true
 
@@ -84,8 +84,6 @@ BOARD_NO_APSME_ATTR              := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/p3100/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/p3100/bluetooth/vnd_espresso.txt
 
 # Charger
 BOARD_CHARGER_SHOW_PERCENTAGE := true
@@ -98,7 +96,7 @@ BOARD_USES_SECURE_SERVICES := true
 
 # Selinux
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/p3100/sepolicy
+    device/samsung/espresso-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     device.te \
@@ -118,14 +116,13 @@ BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_EMMC_WIPE := true
-TARGET_RECOVERY_FSTAB := device/samsung/p3100/rootdir/etc/fstab.espresso
+TARGET_RECOVERY_FSTAB := device/samsung/espresso-common/rootdir/etc/fstab.tab2
 RECOVERY_FSTAB_VERSION := 2
-TARGET_RECOVERY_DEVICE_DIRS += device/samsung/p3100
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/p3100/custombootimg.mk
+TARGET_RECOVERY_DEVICE_DIRS += device/samsung/espresso-common
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/espresso-common/custombootimg.mk
 TARGET_NOT_USE_GZIP_RECOVERY_RAMDISK := true
 
 # TWRP
-TW_THEME := landscape_mdpi
 HAVE_SELINUX := true
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
@@ -140,6 +137,3 @@ TW_INCLUDE_CRYPTO := true
 TW_MAX_BRIGHTNESS := 255
 TW_NO_CPU_TEMP := true
 TW_EXCLUDE_MTP := true
-
-# Use the non-open-source parts, if they're present
--include vendor/samsung/p31xx/BoardConfigVendor.mk
