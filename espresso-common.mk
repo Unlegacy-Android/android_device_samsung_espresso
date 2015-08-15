@@ -72,7 +72,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     camera.piranha \
     GalaxyTab2Settings \
-    hwcomposer.piranha \
     lights.piranha \
     libinvensense_mpl \
     power.piranha \

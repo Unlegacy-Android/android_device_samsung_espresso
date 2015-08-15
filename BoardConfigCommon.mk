@@ -18,7 +18,6 @@
 # by BoardConfigVendor.mk
 
 TARGET_USE_KERNEL_PVR := true
-TARGET_OMAP4430_CPU_OVERCLOCK := true
 
 -include device/samsung/omap4-common/BoardConfigCommon.mk
 
@@ -53,7 +52,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # F2FS filesystem
 TARGET_USERIMAGES_USE_F2FS := true
 
-USE_OPENGL_RENDERER := true
 TARGET_BOOTANIMATION_PRELOAD := true
 
 # Vold
@@ -91,9 +89,6 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # Sensors
 BOARD_USE_LEGACY_SENSORS_FUSION := false
-
-# Security
-BOARD_USES_SECURE_SERVICES := true
 
 # Selinux
 BOARD_SEPOLICY_DIRS += \
