@@ -79,7 +79,6 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     camera.omap4 \
     GalaxyTab2Settings \
-    hwcomposer.piranha \
     lights.piranha \
     libinvensense_mpl \
     power.piranha

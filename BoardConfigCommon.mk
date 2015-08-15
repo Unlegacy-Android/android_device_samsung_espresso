@@ -19,7 +19,6 @@
 # by BoardConfigVendor.mk
 
 TARGET_USE_KERNEL_PVR := true
-TARGET_OMAP4430_CPU_OVERCLOCK := true
 
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
@@ -66,7 +65,6 @@ TARGET_EXTERNAL_APPS = sdcard1
 
 # Egl
 BOARD_EGL_CFG := device/samsung/espresso-common/configs/egl.cfg
-USE_OPENGL_RENDERER := true
 TARGET_BOOTANIMATION_PRELOAD := true
 
 # Vold
@@ -103,9 +101,6 @@ BOARD_BLUEDROID_VENDOR_CONF := device/samsung/espresso-common/bluetooth/vnd_espr
 
 # Sensors
 BOARD_USE_LEGACY_SENSORS_FUSION := false
-
-# Security
-BOARD_USES_SECURE_SERVICES := true
 
 # Selinux
 BOARD_SEPOLICY_DIRS += \
