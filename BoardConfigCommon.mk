@@ -22,8 +22,6 @@ TARGET_OMAP4430_CPU_OVERCLOCK := true
 
 -include device/samsung/omap4-common/BoardConfigCommon.mk
 
-USE_CAMERA_STUB := true
-
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
