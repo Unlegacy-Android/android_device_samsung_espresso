@@ -24,8 +24,6 @@ TARGET_OMAP4430_CPU_OVERCLOCK := true
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
-USE_CAMERA_STUB := true
-
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
