@@ -51,6 +51,8 @@ on fs
     chown radio system /efs
     chmod 0775 /efs
 
+    start pvrsrvinit
+
     setprop ro.crypto.fuse_sdcard true
 
     mount debugfs /sys/kernel/debug /sys/kernel/debug
@@ -282,12 +284,7 @@ service pvrsrvinit /system/bin/pvrsrvinit
     group root
     seclabel u:r:pvrsrvinit:s0
     oneshot
-
-service pvrsrvctl /system/vendor/bin/pvrsrvctl_SGX540_120 --start --no-module
-    class core
-    user root
-    group root
-    oneshot
+    disabled
 
 # SMC Service
 service tf_daemon /system/bin/tf_daemon \
