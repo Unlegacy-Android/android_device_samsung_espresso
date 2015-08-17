@@ -21,7 +21,8 @@
 TARGET_USE_KERNEL_PVR := true
 TARGET_OMAP4430_CPU_OVERCLOCK := true
 
--include device/samsung/omap4-common/BoardConfigCommon.mk
+# Inherit common omap4 board config
+-include hardware/ti/omap4/BoardConfigCommon.mk
 
 USE_CAMERA_STUB := true
 
@@ -38,6 +39,18 @@ BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_CMDLINE :=
+
+ifneq ($(TARGET_USE_KERNEL_PVR),true)
+# External SGX Module
+SGX_MODULES:
+	make clean -C $(HARDWARE_TI_OMAP4_BASE)/pvr-source/eurasiacon/build/linux2/omap4430_android
+	cp $(TARGET_KERNEL_SOURCE)/drivers/video/omap2/omapfb/omapfb.h $(KERNEL_OUT)/drivers/video/omap2/omapfb/omapfb.h
+	make -j8 -C $(HARDWARE_TI_OMAP4_BASE)/pvr-source/eurasiacon/build/linux2/omap4430_android ARCH=arm KERNEL_CROSS_COMPILE=arm-eabi- CROSS_COMPILE=arm-eabi- KERNELDIR=$(KERNEL_OUT) TARGET_PRODUCT="blaze_tablet" BUILD=release TARGET_SGX=540 PLATFORM_VERSION=4.0
+	mv $(KERNEL_OUT)/../../target/kbuild/pvrsrvkm_sgx540_120.ko $(KERNEL_MODULES_OUT)
+	$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/pvrsrvkm_sgx540_120.ko
+
+TARGET_KERNEL_MODULES += SGX_MODULES
+endif
 
 # Init
 TARGET_PROVIDES_INIT := true
