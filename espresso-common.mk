@@ -77,7 +77,8 @@ PRODUCT_PACKAGES += \
     power.piranha \
     sensors.piranha \
     geomagneticd \
-    orientationd
+    orientationd \
+    libsecril-client
 
 # F2FS filesystem
 PRODUCT_PACKAGES += \
