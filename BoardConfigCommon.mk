@@ -22,7 +22,9 @@ TARGET_USE_KERNEL_PVR := true
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
+ifneq ($(filter p3100 p5100,$(TARGET_DEVICE)),)
 TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso-common/include
+endif
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
