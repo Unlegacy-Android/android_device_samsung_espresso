@@ -38,9 +38,6 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x40000000
 # BOARD_KERNEL_CMDLINE :=
 
-# Use dlmalloc
-MALLOC_IMPL := dlmalloc
-
 # We don't support cursor layers, which when attempting to use them,
 # results in no cursors (mouse or otherwise) displayed on the screen.
 TARGET_DISABLE_CURSOR_LAYER := true
