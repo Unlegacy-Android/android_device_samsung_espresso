@@ -36,7 +36,7 @@ BOARD_NAND_PAGE_SIZE := 4096
 BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x40000000
-# BOARD_KERNEL_CMDLINE :=
+BOARD_KERNEL_CMDLINE := androidboot.hardware=espresso
 
 # We don't support cursor layers, which when attempting to use them,
 # results in no cursors (mouse or otherwise) displayed on the screen.
