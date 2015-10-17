@@ -17,8 +17,6 @@
 # This variable is set first, so it can be overridden
 # by BoardConfigVendor.mk
 
-TARGET_USE_KERNEL_PVR := true
-
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
@@ -42,7 +40,6 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=espresso
 # results in no cursors (mouse or otherwise) displayed on the screen.
 TARGET_DISABLE_CURSOR_LAYER := true
 
-ifneq ($(TARGET_USE_KERNEL_PVR),true)
 # External SGX Module
 SGX_MODULES:
 	make clean -C $(HARDWARE_TI_OMAP4_BASE)/pvr-source/eurasiacon/build/linux2/omap4430_android
@@ -52,7 +49,6 @@ SGX_MODULES:
 	$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/pvrsrvkm_sgx540_120.ko
 
 TARGET_KERNEL_MODULES += SGX_MODULES
-endif
 
 # Init
 TARGET_PROVIDES_INIT := true
