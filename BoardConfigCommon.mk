@@ -41,10 +41,6 @@ BOARD_KERNEL_BASE := 0x40000000
 # Use dlmalloc
 MALLOC_IMPL := dlmalloc
 
-# We don't support cursor layers, which when attempting to use them,
-# results in no cursors (mouse or otherwise) displayed on the screen.
-TARGET_DISABLE_CURSOR_LAYER := true
-
 ifneq ($(TARGET_USE_KERNEL_PVR),true)
 # External SGX Module
 SGX_MODULES:
