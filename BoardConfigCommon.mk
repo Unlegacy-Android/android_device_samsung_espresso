@@ -32,6 +32,8 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_OMAP_CPU := 4430
 TARGET_BOOTLOADER_BOARD_NAME := piranha
 
+# Inline kernel building
+TARGET_KERNEL_SOURCE := kernel/samsung/espresso10
 BOARD_NAND_PAGE_SIZE := 4096
 BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_PAGESIZE := 2048
@@ -149,6 +151,11 @@ BOARD_CUSTOM_BOOTIMG_MK := device/samsung/espresso-common/custombootimg.mk
 TARGET_NOT_USE_GZIP_RECOVERY_RAMDISK := true
 
 # TWRP
+ifneq ($(filter p3100 p3110,$(TARGET_DEVICE)),)
+TW_THEME := landscape_mdpi
+else
+TW_THEME := landscape_hdpi
+endif
 HAVE_SELINUX := true
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
