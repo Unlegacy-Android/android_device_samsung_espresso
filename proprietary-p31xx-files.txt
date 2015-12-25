@@ -3,4 +3,3 @@ system/bin/orientationd
 system/etc/wifi/bcmdhd_apsta.bin
 system/etc/wifi/bcmdhd_mfg.bin
 system/etc/wifi/bcmdhd_sta.bin
-system/lib/hw/vendor-camera.piranha.so
