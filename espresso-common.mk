@@ -20,7 +20,7 @@ TARGET_BOARD_OMAP_CPU := 4430
 # Include common omap4 makefile
 $(call inherit-product, hardware/ti/omap4/omap4.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/espresso-common/overlay/aosp-common
+DEVICE_PACKAGE_OVERLAYS += device/samsung/espresso-common/overlay
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
