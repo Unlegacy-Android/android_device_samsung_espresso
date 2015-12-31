@@ -51,6 +51,9 @@ PRODUCT_PACKAGES += \
     twrp.fstab
 
 # GPS
+PRODUCT_PACKAGES += \
+    libgpsd-compat
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
