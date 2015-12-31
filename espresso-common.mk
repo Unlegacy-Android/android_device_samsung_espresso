@@ -15,6 +15,8 @@
 # limitations under the License.
 #
 
+TARGET_BOARD_OMAP_CPU := 4430
+
 # Include common omap4 makefile
 $(call inherit-product, hardware/ti/omap4/omap4.mk)
 
@@ -163,6 +165,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 $(call inherit-product-if-exists, vendor/samsung/espresso-common/espresso-common-vendor.mk)
-$(call inherit-product-if-exists, vendor/samsung/omap4-common/common-vendor.mk)
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)

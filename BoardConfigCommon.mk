@@ -25,7 +25,6 @@ TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso-common/include
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-TARGET_BOARD_OMAP_CPU := 4430
 TARGET_BOOTLOADER_BOARD_NAME := piranha
 
 # Inline kernel building
