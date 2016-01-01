@@ -45,11 +45,6 @@ PRODUCT_PACKAGES += \
     ueventd.espresso.rc \
     ueventd.espresso10.rc
 
-# Recovery Ramdisk
-PRODUCT_PACKAGES += \
-    init.recovery.espresso.rc \
-    twrp.fstab
-
 # GPS
 PRODUCT_PACKAGES += \
     libgpsd-compat
