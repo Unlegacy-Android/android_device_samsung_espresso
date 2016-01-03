@@ -20,8 +20,6 @@ $(call inherit-product, hardware/ti/omap4/omap4.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/espresso-common/overlay/aosp-common
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
@@ -56,8 +54,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0 \
-    wifi.supplicant_scan_interval=15
+    wifi.interface=wlan0
 
 # Media profiles
 PRODUCT_COPY_FILES += \
@@ -123,12 +120,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_CHARACTERISTICS := tablet
 
 PRODUCT_PACKAGES += \
-    librs_jni \
     com.android.future.usb.accessory
-
-# Feature live wallpaper
-PRODUCT_COPY_FILES += \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \

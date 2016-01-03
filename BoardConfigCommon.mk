@@ -26,7 +26,6 @@ TARGET_USE_KERNEL_PVR := true
 TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso-common/include
 
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
 
 TARGET_BOARD_OMAP_CPU := 4430
 TARGET_BOARD_PLATFORM := omap4
@@ -52,10 +51,6 @@ SGX_MODULES:
 
 TARGET_KERNEL_MODULES += SGX_MODULES
 endif
-
-# Init
-TARGET_PROVIDES_INIT := true
-TARGET_PROVIDES_INIT_TARGET_RC := true
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -84,7 +79,6 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun%d/
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
-BOARD_WLAN_DEVICE_REV            := bcm4330_b1
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
@@ -108,9 +102,6 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/espresso-common/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/espresso-common/bluetooth/vnd_espresso.txt
 
-# Sensors
-BOARD_USE_LEGACY_SENSORS_FUSION := false
-
 # Selinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/espresso-common/selinux
@@ -128,9 +119,6 @@ BOARD_SEPOLICY_UNION += \
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun0/file"
-BOARD_USES_MMCUTILS := true
-BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_FSTAB := device/samsung/espresso-common/rootdir/etc/fstab.tab2
 TARGET_RECOVERY_DEVICE_DIRS += device/samsung/espresso-common
