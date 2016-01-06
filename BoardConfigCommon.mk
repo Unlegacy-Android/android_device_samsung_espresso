@@ -108,7 +108,5 @@ TARGET_RECOVERY_FSTAB := device/samsung/espresso-common/rootdir/etc/fstab.tab2
 RECOVERY_FSTAB_VERSION := 2
 
 # RIL
-BOARD_VENDOR := samsung
 BOARD_PROVIDES_LIBRIL := true
-BOARD_MODEM_TYPE := xmm6260
 BOARD_RIL_CLASS := ../../../device/samsung/espresso-common/ril
