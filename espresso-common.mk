@@ -94,7 +94,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=SamsungExynos4RIL
+    ro.telephony.ril_class=SamsungOmap4RIL
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \

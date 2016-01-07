@@ -68,6 +68,7 @@ TARGET_BOOTANIMATION_PRELOAD := true
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
+BOARD_RIL_CLASS := ../../../device/samsung/espresso-common/ril
 
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 12
