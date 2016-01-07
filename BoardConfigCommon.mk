@@ -33,7 +33,7 @@ TARGET_BOARD_PLATFORM_VARIANT := omap4-next
 TARGET_BOOTLOADER_BOARD_NAME := piranha
 
 # Inline kernel building
-TARGET_KERNEL_SOURCE := kernel/samsung/espresso10
+TARGET_KERNEL_SOURCE := kernel/samsung/espresso
 BOARD_NAND_PAGE_SIZE := 4096
 BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_PAGESIZE := 2048
@@ -67,12 +67,6 @@ TARGET_BOOTANIMATION_PRELOAD := true
 BOARD_PROVIDES_LIBRIL := true
 BOARD_RIL_CLASS := ../../../device/samsung/espresso-common/ril
 
-# Vold
-BOARD_VOLD_MAX_PARTITIONS := 12
-BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun%d/file"
-
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
@@ -87,10 +81,7 @@ WIFI_DRIVER_FW_PATH_AP           := "/system/etc/wifi/bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/wifi/bcmdhd_p2p.bin"
 WIFI_DRIVER_MODULE_NAME          := "dhd"
 WIFI_DRIVER_MODULE_ARG           := "firmware_path=/system/etc/wifi/bcmdhd_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
-WIFI_DRIVER_MODULE_AP_ARG        := "firmware_path=/system/etc/wifi/bcmdhd_apsta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
 WIFI_BAND                        := 802_11_ABG
-BOARD_HAVE_SAMSUNG_WIFI          := true
-BOARD_NO_APSME_ATTR              := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -114,30 +105,6 @@ BOARD_SEPOLICY_UNION += \
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun0/file"
 BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_FSTAB := device/samsung/espresso-common/rootdir/etc/fstab.tab2
-TARGET_RECOVERY_DEVICE_DIRS += device/samsung/espresso-common
 RECOVERY_FSTAB_VERSION := 2
-
-# TWRP
-ifneq ($(filter p3100 p3110,$(TARGET_DEVICE)),)
-DEVICE_RESOLUTION := 1024x600
-else
-DEVICE_RESOLUTION := 1280x800
-endif
-HAVE_SELINUX := true
-RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_NO_REBOOT_BOOTLOADER := true
-TW_HAS_DOWNLOAD_MODE := true
-TW_FLASH_FROM_STORAGE := true
-TW_INCLUDE_JB_CRYPTO := true
-TW_MAX_BRIGHTNESS := 255
-
-# Charging mode
-BOARD_CHARGER_RES := device/samsung/espresso-common/res/charger

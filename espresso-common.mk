@@ -40,11 +40,6 @@ PRODUCT_PACKAGES += \
     ueventd.espresso.rc \
     ueventd.espresso10.rc
 
-# Recovery Ramdisk
-PRODUCT_PACKAGES += \
-    init.recovery.espresso.rc \
-    twrp.fstab
-
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
@@ -129,6 +124,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 $(call inherit-product-if-exists, vendor/samsung/espresso-common/espresso-common-vendor.mk)
-$(call inherit-product-if-exists, vendor/samsung/omap4-common/common-vendor.mk)
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
