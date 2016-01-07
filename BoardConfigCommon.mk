@@ -81,7 +81,5 @@ TARGET_RECOVERY_FSTAB := device/samsung/espresso-common/rootdir/etc/fstab.tab2
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
 # RIL
-BOARD_VENDOR := samsung
 BOARD_PROVIDES_LIBRIL := true
-BOARD_MODEM_TYPE := xmm6260
 BOARD_RIL_CLASS := ../../../device/samsung/espresso-common/ril
