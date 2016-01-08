@@ -90,8 +90,7 @@ PRODUCT_PACKAGES += \
     power.piranha \
     sensors.piranha \
     geomagneticd \
-    orientationd \
-    libsecril-client
+    orientationd
 
 # F2FS filesystem
 PRODUCT_PACKAGES += \
@@ -107,6 +106,10 @@ PRODUCT_PACKAGES += \
 # Samsung dock keyboard
 PRODUCT_PACKAGES += \
     dock_kbd_attach
+
+# RIL
+PRODUCT_PACKAGES += \
+	libsecril-client
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungOmap4RIL

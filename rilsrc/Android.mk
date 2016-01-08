@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-RIL_PATH := $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
-# libril
-include $(RIL_PATH)/libril/Android.mk
-
-# ril client
-include $(RIL_PATH)/libsecril-client/Android.mk)
+include $(call all-makefiles-under,$(LOCAL_PATH))
