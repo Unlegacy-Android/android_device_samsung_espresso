@@ -30,7 +30,7 @@ BOARD_NAND_PAGE_SIZE := 4096
 BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x40000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=espresso
+BOARD_KERNEL_CMDLINE := androidboot.hardware=espresso androidboot.selinux=permissive
 
 # External SGX Module
 SGX_MODULES:
