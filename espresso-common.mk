@@ -33,12 +33,9 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.espresso \
-    fstab.espresso10 \
     init.espresso.rc \
-    init.espresso10.rc \
     init.tab2.usb.rc \
-    ueventd.espresso.rc \
-    ueventd.espresso10.rc
+    ueventd.espresso.rc
 
 # GPS
 PRODUCT_PACKAGES += \
