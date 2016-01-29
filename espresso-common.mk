@@ -22,7 +22,8 @@ TARGET_BOARD_OMAP_CPU := 4430
 # Include common omap4 makefile
 $(call inherit-product, hardware/ti/omap4/omap4.mk)
 
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+	$(LOCAL_PATH)/overlay-common
 
 # GPS config
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
