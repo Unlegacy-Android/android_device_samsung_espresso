@@ -17,7 +17,7 @@
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso-common/include
+TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso/include
 
 TARGET_NO_BOOTLOADER := true
 
@@ -74,17 +74,17 @@ WIFI_BAND                        := 802_11_ABG
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/espresso-common/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/espresso/bluetooth
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/espresso-common/sepolicy
+    device/samsung/espresso/sepolicy
 
 # Recovery
 RECOVERY_FSTAB_VERSION := 2
-TARGET_RECOVERY_FSTAB := device/samsung/espresso-common/rootdir/etc/fstab.tab2
+TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/etc/fstab.tab2
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
-BOARD_RIL_CLASS := ../../../device/samsung/espresso-common/ril
+BOARD_RIL_CLASS := ../../../device/samsung/espresso/ril

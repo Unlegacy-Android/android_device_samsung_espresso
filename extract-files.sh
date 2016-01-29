@@ -16,7 +16,7 @@
 # limitations under the License.
 
 VENDOR=samsung
-COMMON=espresso-common
+COMMON=espresso
 COMMONOUTDIR=vendor/$VENDOR/$COMMON
 COMMONBASE=../../../$COMMONOUTDIR/proprietary
 COMMONMAKEFILE=../../../$COMMONOUTDIR/common-vendor-blobs.mk
@@ -68,7 +68,7 @@ for FILE in `cat $COMMONPROPS | grep -v ^# | grep -v ^$`; do
 done
 
 
-(cat << EOF) | sed s/__COMMON__/$COMMON/g | sed s/__VENDOR__/$VENDOR/g > ../../../$COMMONOUTDIR/espresso-common-vendor.mk
+(cat << EOF) | sed s/__COMMON__/$COMMON/g | sed s/__VENDOR__/$VENDOR/g > ../../../$COMMONOUTDIR/espresso-vendor.mk
 # Copyright (C) 2015 SlimRoms
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

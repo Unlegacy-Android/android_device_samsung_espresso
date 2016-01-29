@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/espresso-common
+LOCAL_PATH := device/samsung/espresso
 
 TARGET_BOARD_OMAP_CPU := 4430
 
