@@ -21,7 +21,7 @@
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso-common/include
+TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso/include
 
 TARGET_NO_BOOTLOADER := true
 
@@ -57,12 +57,12 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Egl
-BOARD_EGL_CFG := device/samsung/espresso-common/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/espresso/configs/egl.cfg
 TARGET_BOOTANIMATION_PRELOAD := true
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
-BOARD_RIL_CLASS := ../../../device/samsung/espresso-common/ril
+BOARD_RIL_CLASS := ../../../device/samsung/espresso/ril
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
@@ -83,12 +83,12 @@ WIFI_BAND                        := 802_11_ABG
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/espresso-common/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/espresso-common/bluetooth/vnd_espresso.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/espresso/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/espresso/bluetooth/vnd_espresso.txt
 
 # Selinux
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/espresso-common/selinux
+    device/samsung/espresso/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \
@@ -103,5 +103,5 @@ BOARD_SEPOLICY_UNION += \
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_SUPPRESS_EMMC_WIPE := true
-TARGET_RECOVERY_FSTAB := device/samsung/espresso-common/rootdir/etc/fstab.tab2
+TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/etc/fstab.tab2
 RECOVERY_FSTAB_VERSION := 2
