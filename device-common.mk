@@ -25,9 +25,6 @@ $(call inherit-product, hardware/ti/omap4/omap4.mk)
 DEVICE_PACKAGE_OVERLAYS += \
 	$(LOCAL_PATH)/overlay-common
 
-# GPS config
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
-
 PRODUCT_AAPT_CONFIG := large
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
@@ -39,6 +36,9 @@ PRODUCT_PACKAGES += \
     ueventd.espresso.rc
 
 # GPS
+# gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
+
 PRODUCT_PACKAGES += \
     libgpsd-compat
 
