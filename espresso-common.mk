@@ -20,9 +20,6 @@ $(call inherit-product, hardware/ti/omap4/omap4.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/espresso-common/overlay/aosp-common
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
-
 LOCAL_PATH := device/samsung/espresso-common
 
 PRODUCT_AAPT_CONFIG := large
@@ -40,6 +37,9 @@ PRODUCT_PACKAGES += \
     ueventd.espresso10.rc
 
 # GPS
+# gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
