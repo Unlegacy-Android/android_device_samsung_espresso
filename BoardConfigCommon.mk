@@ -17,8 +17,6 @@
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso/include
-
 TARGET_NO_BOOTLOADER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := piranha
@@ -84,7 +82,3 @@ BOARD_SEPOLICY_DIRS += \
 RECOVERY_FSTAB_VERSION := 2
 TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/etc/fstab.tab2
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-BOARD_RIL_CLASS := ../../../device/samsung/espresso/ril
