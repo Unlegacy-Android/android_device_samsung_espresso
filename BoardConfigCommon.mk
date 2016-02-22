@@ -20,8 +20,6 @@
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso/include
-
 TARGET_NO_BOOTLOADER := true
 
 TARGET_BOARD_OMAP_CPU := 4430
@@ -107,7 +105,3 @@ TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/etc/fstab.tab2
 RECOVERY_FSTAB_VERSION := 2
-
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-BOARD_RIL_CLASS := ../../../device/samsung/espresso/ril
