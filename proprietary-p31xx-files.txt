@@ -1,5 +1,0 @@
-system/bin/geomagneticd
-system/bin/orientationd
-system/etc/wifi/bcmdhd_apsta.bin
-system/etc/wifi/bcmdhd_mfg.bin
-system/etc/wifi/bcmdhd_sta.bin
