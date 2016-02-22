@@ -60,10 +60,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_EGL_CFG := device/samsung/espresso/configs/egl.cfg
 TARGET_BOOTANIMATION_PRELOAD := true
 
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-BOARD_RIL_CLASS := ../../../device/samsung/espresso/ril
-
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
