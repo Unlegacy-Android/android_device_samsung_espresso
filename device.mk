@@ -23,11 +23,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Include wifi-only overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/samsung/espresso/overlay
+    $(LOCAL_PATH)/overlay
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/samsung/espresso/audio/audio_policy.conf:system/etc/audio_policy.conf
+    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/audio/tiny_hw_espressowifi.xml:system/etc/sound/espressowifi \
+    $(LOCAL_PATH)/audio/tiny_hw_espresso10wifi.xml:system/etc/sound/espresso10wifi
 
 # IR
 PRODUCT_PACKAGES += \
