@@ -100,5 +100,5 @@ BOARD_SEPOLICY_UNION += \
 
 # Recovery
 RECOVERY_FSTAB_VERSION := 2
-TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/etc/fstab.tab2
+TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/fstab.espresso
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
