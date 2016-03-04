@@ -28,12 +28,15 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_AAPT_CONFIG := large
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
-# Ramdisk
-PRODUCT_PACKAGES += \
-    fstab.espresso \
-    init.espresso.rc \
-    init.tab2.usb.rc \
-    ueventd.espresso.rc
+# Init files
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/init.espresso.rc:root/init.espresso.rc \
+	$(LOCAL_PATH)/rootdir/init.espresso.usb.rc:root/init.espresso.usb.rc \
+	$(LOCAL_PATH)/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc
+
+# Fstab
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso
 
 # GPS
 # gps config appropriate for this device

@@ -1,5 +1,5 @@
 import init.omap4.rc
-import init.tab2.usb.rc
+import init.espresso.usb.rc
 
 on init
     # Support legacy paths
