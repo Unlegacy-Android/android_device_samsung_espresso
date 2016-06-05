@@ -65,10 +65,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/usr/keylayout/espresso-gpio-keypad.kl:system/usr/keylayout/espresso-gpio-keypad.kl \
     $(LOCAL_PATH)/usr/keylayout/sec_keyboard.kl:system/usr/keylayout/sec_keyboard.kl
 
-# init.d script to load the keyboard dock driver
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.d/01KeyboardDock:system/etc/init.d/01KeyboardDock
-
 # Packages
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
