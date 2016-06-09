@@ -15,12 +15,15 @@
 # limitations under the License.
 #
 
+LOCAL_PATH := device/samsung/espresso
+
+TARGET_BOARD_OMAP_CPU := 4430
+
 # Include common omap4 makefile
 $(call inherit-product, hardware/ti/omap4/omap4.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/espresso/overlay/aosp-common
-
-LOCAL_PATH := device/samsung/espresso
+DEVICE_PACKAGE_OVERLAYS +=  \
+    $(LOCAL_PATH)/overlay/aosp-common
 
 # Enable higher-res drawables while keeping mdpi as primary source
 PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi

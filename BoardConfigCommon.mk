@@ -25,7 +25,6 @@ TARGET_SPECIFIC_HEADER_PATH += device/samsung/espresso/include
 
 TARGET_NO_BOOTLOADER := true
 
-TARGET_BOARD_OMAP_CPU := 4430
 TARGET_BOOTLOADER_BOARD_NAME := piranha
 
 # Inline kernel building
@@ -56,7 +55,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Egl
 BOARD_EGL_CFG := device/samsung/espresso/configs/egl.cfg
-TARGET_BOOTANIMATION_PRELOAD := true
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
