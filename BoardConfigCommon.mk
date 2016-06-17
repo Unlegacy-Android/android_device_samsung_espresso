@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+export BOARD_USE_TI_LIBION=false
+BOARD_USE_TI_LIBION=false
+
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
