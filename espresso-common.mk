@@ -76,7 +76,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     camera.omap4 \
-    GalaxyTab2Settings \
     lights.piranha \
     libinvensense_mpl \
     power.piranha \
