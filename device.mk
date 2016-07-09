@@ -15,7 +15,7 @@
 #
 
 # Include common device configuration
-$(call inherit-product, device/samsung/espresso/espresso-common.mk)
+$(call inherit-product, device/samsung/espresso/device-common.mk)
 
 # This is a wifi-only device
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -23,13 +23,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Include wifi-only overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/samsung/espresso/overlay/aosp
+    $(LOCAL_PATH)/overlay/aosp
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/samsung/espresso/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    device/samsung/espresso/audio/tiny_hw_espressowifi.xml:system/etc/sound/espressowifi \
-    device/samsung/espresso/audio/tiny_hw_espresso10wifi.xml:system/etc/sound/espresso10wifi
+    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/audio/tiny_hw_espressowifi.xml:system/etc/sound/espressowifi \
+    $(LOCAL_PATH)/audio/tiny_hw_espresso10wifi.xml:system/etc/sound/espresso10wifi
 
 # IR
 PRODUCT_PACKAGES += \

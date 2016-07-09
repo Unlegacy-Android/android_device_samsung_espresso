@@ -14,15 +14,11 @@
 # limitations under the License.
 #
 
-# This variable is set first, so it can be overridden
-# by BoardConfigVendor.mk
-
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
 TARGET_NO_BOOTLOADER := true
 
-TARGET_BOARD_OMAP_CPU := 4430
 TARGET_BOOTLOADER_BOARD_NAME := piranha
 
 # Inline kernel building
@@ -32,7 +28,7 @@ BOARD_NAND_PAGE_SIZE := 4096
 BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x40000000
-# BOARD_KERNEL_CMDLINE :=
+BOARD_KERNEL_CMDLINE := androidboot.hardware=espresso
 
 # Use dlmalloc
 MALLOC_IMPL := dlmalloc
@@ -50,13 +46,13 @@ TARGET_KERNEL_MODULES += SGX_MODULES
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
-BOARD_CACHEIMAGE_PARTITION_SIZE := 734003200
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
+BOARD_CACHEIMAGE_PARTITION_SIZE := 734003200
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 5003787264
 BOARD_FLASH_BLOCK_SIZE := 4096
 
-# Wifi
+# Wi-Fi
 BOARD_WLAN_DEVICE                := bcmdhd
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
@@ -76,9 +72,8 @@ WIFI_BAND                        := 802_11_ABG
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/espresso/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/espresso/bluetooth/vnd_espresso.txt
 
-# Selinux
+# SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/espresso/sepolicy
 
@@ -100,7 +95,7 @@ BOARD_SEPOLICY_UNION += \
     vold.te
 
 # Recovery
+RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/etc/fstab.tab2
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_SUPPRESS_EMMC_WIPE := true
-TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/etc/fstab.tab2
-RECOVERY_FSTAB_VERSION := 2
