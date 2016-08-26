@@ -1,4 +1,5 @@
 # allow insmod
+allow init kernel:system module_request;
 allow init self:capability sys_module;
 
 # chmod/chown rfkill device
@@ -6,3 +7,6 @@ allow init sysfs_bluetooth_writable:file getattr;
 
 # allow creating /sdcard symlink
 allow init tmpfs:lnk_file create;
+
+# Allow restorecon
+allow init debugfs_trace_marker:file getattr;
