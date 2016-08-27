@@ -31,6 +31,7 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 # Init files
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/init.espresso.rc:root/init.espresso.rc \
+	$(LOCAL_PATH)/rootdir/init.espresso.sensors.rc:root/init.espresso.sensors.rc \
 	$(LOCAL_PATH)/rootdir/init.espresso.usb.rc:root/init.espresso.usb.rc \
 	$(LOCAL_PATH)/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc
 
