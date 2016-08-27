@@ -39,6 +39,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso
 
+# Generic K3.4 Ducati
+PRODUCT_PACKAGES += \
+    ducati-m3-core0
+
 # GPS
 # gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
