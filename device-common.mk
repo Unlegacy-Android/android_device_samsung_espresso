@@ -78,7 +78,6 @@ PRODUCT_PACKAGES += \
     camera.omap4 \
     lights.piranha \
     libinvensense_mpl \
-    power.piranha \
     sensors.piranha \
     geomagneticd \
     orientationd
@@ -124,7 +123,6 @@ PRODUCT_CHARACTERISTICS := tablet
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
-    ro.bq.gpu_to_cpu_unsupported=1 \
     ro.sf.lcd_density=160
 
 PRODUCT_PROPERTY_OVERRIDES += \
