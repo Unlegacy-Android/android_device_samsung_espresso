@@ -53,6 +53,9 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 WITH_DEXPREOPT := true
 WITH_DEXPREOPT_PIC := true
 
+# Configure jemalloc for low-memory
+MALLOC_SVELTE := true
+
 # Wi-Fi
 BOARD_WLAN_DEVICE                := bcmdhd
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
