@@ -71,7 +71,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     camera.omap4 \
     e2fsck \
-    lights.piranha \
+    lights.omap4 \
     libinvensense_mpl \
     sensors.piranha \
     geomagneticd \
