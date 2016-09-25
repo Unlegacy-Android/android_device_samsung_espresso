@@ -90,7 +90,7 @@ PRODUCT_PACKAGES += \
     audio.primary.piranha \
     audio.r_submix.default \
     audio.usb.default \
-    lights.piranha \
+    lights.omap4 \
     libinvensense_mpl \
     sensors.piranha \
     geomagneticd \
