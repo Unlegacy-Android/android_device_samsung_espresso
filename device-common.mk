@@ -44,8 +44,7 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 PRODUCT_PACKAGES += \
-    libgpsd-compat \
-    libstlport
+    libgpsd-compat
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
