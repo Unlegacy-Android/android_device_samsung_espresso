@@ -22,7 +22,7 @@ TARGET_BOARD_OMAP_CPU := 4430
 # Include common omap4 makefile
 $(call inherit-product, hardware/ti/omap4/omap4.mk)
 
-DEVICE_PACKAGE_OVERLAYS +=  \
+DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay/aosp-common
 
 # Enable higher-res drawables while keeping mdpi as primary source
@@ -47,7 +47,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
-# Wifi
+# Wi-Fi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 

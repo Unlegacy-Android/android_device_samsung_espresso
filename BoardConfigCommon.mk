@@ -15,9 +15,6 @@
 # limitations under the License.
 #
 
-# This variable is set first, so it can be overridden
-# by BoardConfigVendor.mk
-
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
@@ -32,7 +29,7 @@ BOARD_NAND_PAGE_SIZE := 4096
 BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x40000000
-BOARD_KERNEL_CMDLINE :=
+BOARD_KERNEL_CMDLINE := androidboot.hardware=espresso
 
 # External SGX Module
 SGX_MODULES:
@@ -54,7 +51,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Egl
 BOARD_EGL_CFG := device/samsung/espresso/configs/egl.cfg
 
-# Wifi
+# Wi-Fi
 BOARD_WLAN_DEVICE                := bcmdhd
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
@@ -76,7 +73,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/espresso/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/espresso/bluetooth/vnd_espresso.txt
 
-# Selinux
+# SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/espresso/sepolicy
 
@@ -91,6 +88,6 @@ BOARD_SEPOLICY_UNION += \
     wpa_supplicant.te
 
 # Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/fstab.espresso
 RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/fstab.espresso
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
