@@ -23,21 +23,21 @@ TARGET_BOARD_OMAP_CPU := 4430
 $(call inherit-product, hardware/ti/omap4/omap4.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
-	$(LOCAL_PATH)/overlay-common
+    $(LOCAL_PATH)/overlay-common
 
 PRODUCT_AAPT_CONFIG := large
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Init files
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/rootdir/init.espresso.rc:root/init.espresso.rc \
-	$(LOCAL_PATH)/rootdir/init.espresso.sensors.rc:root/init.espresso.sensors.rc \
-	$(LOCAL_PATH)/rootdir/init.espresso.usb.rc:root/init.espresso.usb.rc \
-	$(LOCAL_PATH)/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc
+    $(LOCAL_PATH)/rootdir/init.espresso.rc:root/init.espresso.rc \
+    $(LOCAL_PATH)/rootdir/init.espresso.sensors.rc:root/init.espresso.sensors.rc \
+    $(LOCAL_PATH)/rootdir/init.espresso.usb.rc:root/init.espresso.usb.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc
 
 # Fstab
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso
+    $(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso
 
 # Generic K3.4 Ducati
 PRODUCT_PACKAGES += \
@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
-# Wifi
+# Wi-Fi
 PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
