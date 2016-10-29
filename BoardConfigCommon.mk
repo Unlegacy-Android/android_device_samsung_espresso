@@ -15,9 +15,6 @@
 # limitations under the License.
 #
 
-# This variable is set first, so it can be overridden
-# by BoardConfigVendor.mk
-
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
@@ -32,7 +29,7 @@ BOARD_NAND_PAGE_SIZE := 4096
 BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x40000000
-BOARD_KERNEL_CMDLINE :=
+BOARD_KERNEL_CMDLINE := androidboot.hardware=espresso
 
 # External SGX Module
 SGX_MODULES:
@@ -76,7 +73,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/espresso/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/espresso/bluetooth/vnd_espresso.txt
 
-# Selinux
+# SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/espresso/sepolicy
 
