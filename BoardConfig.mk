@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+# Include common espresso BoardConfig
 include device/samsung/espresso/BoardConfigCommon.mk
 
 # assert
