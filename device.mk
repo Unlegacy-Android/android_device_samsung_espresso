@@ -15,7 +15,7 @@
 #
 
 # Include common device configuration
-$(call inherit-product, device/samsung/espresso/espresso-common.mk)
+$(call inherit-product, device/samsung/espresso/device-common.mk)
 
 # This is a wifi-only device
 PRODUCT_PROPERTY_OVERRIDES += \
