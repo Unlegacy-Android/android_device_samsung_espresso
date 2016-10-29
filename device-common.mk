@@ -46,7 +46,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
-# Wifi
+# Wi-Fi
 PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \

@@ -37,3 +37,6 @@
 /dev/block/platform/omap/omap_hsmmc.1/by-name/FACTORYFS u:object_r:block_device:s0
 /dev/block/platform/omap/omap_hsmmc.1/by-name/CACHE     u:object_r:block_device:s0
 /dev/block/platform/omap/omap_hsmmc.1/by-name/DATAFS    u:object_r:block_device:s0
+
+# Swap
+/dev/block/zram(.*)                                     u:object_r:block_device:s0
