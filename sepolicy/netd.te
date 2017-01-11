@@ -1,0 +1,2 @@
+# Allow loading the bcmdhd kernel module
+allow netd kernel:system module_request;
