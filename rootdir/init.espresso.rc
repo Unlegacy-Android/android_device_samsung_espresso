@@ -39,9 +39,6 @@ on fs
 
     restorecon_recursive /efs
 
-    # pvr module
-    insmod /system/lib/modules/pvrsrvkm_sgx540_120.ko
-
     setprop ro.crypto.fuse_sdcard true
 
     # read only 1 page at a time
