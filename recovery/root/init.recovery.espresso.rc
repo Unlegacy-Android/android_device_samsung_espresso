@@ -1,0 +1,10 @@
+on init
+    # Set touchscreen to landscape mode for recovery
+    write /sys/devices/virtual/sec/tsp/pivot 0
+
+    # Make k3.0 recoveries compatible with k3.4+ updater-scripts
+    symlink /dev/block/platform/omap/omap_hsmmc.1 /dev/block/platform/omap_hsmmc.1
+
+    # Make k3.4+ recoveries compatible with k3.0 updater-scripts
+    mkdir /dev/block/platform/omap
+    symlink /dev/block/platform/omap_hsmmc.1 /dev/block/platform/omap/omap_hsmmc.1
