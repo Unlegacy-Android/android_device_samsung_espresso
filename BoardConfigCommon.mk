@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-export BOARD_USE_TI_LIBION=false
-BOARD_USE_TI_LIBION=false
-
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
@@ -28,7 +25,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := piranha
 
 # Inline kernel building
-TARGET_KERNEL_SOURCE := kernel/omap4/common
+TARGET_KERNEL_SOURCE := kernel/samsung/espresso-7.1
 TARGET_KERNEL_CONFIG := espresso_defconfig
 BOARD_NAND_PAGE_SIZE := 4096
 BOARD_NAND_SPARE_SIZE := 128
