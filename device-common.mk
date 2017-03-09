@@ -39,9 +39,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso
 
-# Generic K3.4 Ducati
+# k3.0 Ducati
 PRODUCT_PACKAGES += \
-    ducati-m3-core0
+    ducati-m3
 
 # GPS
 # gps config appropriate for this device
@@ -90,6 +90,7 @@ PRODUCT_PACKAGES += \
     audio.primary.piranha \
     audio.r_submix.default \
     audio.usb.default \
+    camera.omap4 \
     lights.omap4 \
     libinvensense_mpl \
     sensors.piranha \
