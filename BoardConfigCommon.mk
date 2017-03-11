@@ -44,6 +44,8 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Egl
 BOARD_EGL_CFG := device/samsung/espresso/configs/egl.cfg
 
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+
 # Wi-Fi
 BOARD_WLAN_DEVICE                := bcmdhd
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
