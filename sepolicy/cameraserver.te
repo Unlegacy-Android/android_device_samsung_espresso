@@ -1,0 +1,4 @@
+allow cameraserver device:dir { read open };
+allow cameraserver rpmsg_device:chr_file { read open write ioctl};
+allow cameraserver sensorservice_service:service_manager { find };
+allow cameraserver sysfs:file { read open getattr };
