@@ -1,0 +1,2 @@
+allow cameraserver rpmsg_device:chr_file { read open };
+allow cameraserver device:dir { read open };

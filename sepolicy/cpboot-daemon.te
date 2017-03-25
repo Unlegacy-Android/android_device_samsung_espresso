@@ -1,1 +1,1 @@
-type cpboot-daemon, domain;
+type cpboot-daemon, domain, domain_deprecated;
