@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "44576cb4_a4d302d3",
+        "filename": "sepolicy/init.te",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2017-04-15T10:01:08Z",
+      "side": 1,
+      "message": "{ create_file_perms relabelfrom }",
+      "range": {
+        "startLine": 14,
+        "startChar": 33,
+        "endLine": 14,
+        "endChar": 68
+      },
+      "revId": "e6b9a815d698181f7ed993ffeedf04ba0782d031",
+      "serverId": "d5e41ece-075f-43fb-b5a6-48951f3d7b1d",
+      "unresolved": false
+    }
+  ]
+}
