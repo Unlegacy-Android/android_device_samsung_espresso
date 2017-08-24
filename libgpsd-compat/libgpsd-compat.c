@@ -6,6 +6,9 @@
 #include <utils/Log.h>
 #include <hardware/power.h>
 #include <hardware/hardware.h>
+#include <sensor/Sensor.h>
+#include <sensor/SensorManager.h>
+#include <sensor/SensorEventQueue.h>
 
 /*
  * Problems:
