@@ -6,7 +6,11 @@
 #include <utils/Log.h>
 #include <hardware/power.h>
 #include <hardware/hardware.h>
+#include <sensor/Sensor.h>
+#include <sensor/SensorManager.h>
+#include <sensor/SensorEventQueue.h>
 
+extern "C" {
 /*
  * Problems:
  * 1. Nexus 10's GPS library was made to work with android L
@@ -161,4 +165,5 @@ void libEvtUnloading(void)
         _ZN7android13SensorManagerD1Ev(_ZN7android9SingletonINS_13SensorManagerEE9sInstanceE);
         _ZN7android9SingletonINS_13SensorManagerEE9sInstanceE = NULL;
     }
+}
 }
