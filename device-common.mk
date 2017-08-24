@@ -89,7 +89,6 @@ PRODUCT_PACKAGES += \
     audio.primary.piranha \
     audio.r_submix.default \
     audio.usb.default \
-    camera.omap4 \
     lights.omap4 \
     sensors.omap4 \
     geomagneticd \
