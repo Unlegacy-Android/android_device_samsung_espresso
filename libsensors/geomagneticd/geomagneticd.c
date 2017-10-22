@@ -92,7 +92,7 @@ int geomagneticd_config_write(struct geomagneticd_data *data)
 	if (data == NULL)
 		return -EINVAL;
 
-	config_fd = open(GEOMAGNETICD_CONFIG_BACKUP_PATH, O_WRONLY | O_TRUNC | O_CREAT, 0644);
+	config_fd = open(GEOMAGNETICD_CONFIG_PATH, O_WRONLY | O_TRUNC | O_CREAT, 0644);
 	if (config_fd < 0) {
 		ALOGE("%s: Unable to open config", __func__);
 		goto error;
@@ -108,8 +108,6 @@ int geomagneticd_config_write(struct geomagneticd_data *data)
 		ALOGE("%s: Unable to write config", __func__);
 		goto error;
 	}
-
-	rename(GEOMAGNETICD_CONFIG_BACKUP_PATH, GEOMAGNETICD_CONFIG_PATH);
 
 	rc = 0;
 	goto complete;
