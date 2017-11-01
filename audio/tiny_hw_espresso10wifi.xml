@@ -122,7 +122,7 @@ We are able to have most of our routing static so do that
         <ctl name="Headphone Volume" val="61"/>
     </path>
     <path name="off">
-        <ctl name="HP Switch" val="0"/>
+        <ctl name="HP Switch" val="1"/>
         <ctl name="Headphone ZC Switch" val="0"/>
         <ctl name="AIF1DAC1 Volume" val="96"/>
         <ctl name="AIF1 Boost Volume" val="0"/>
@@ -184,10 +184,10 @@ We are able to have most of our routing static so do that
         <ctl name="AIF2DAC Mux" val="AIF3DACDAT"/>
     </path>
     <path name="off">
-        <ctl name="Main Mic Switch" val="0"/>
-        <ctl name="MIXINL IN1L Switch" val="0"/>
-        <ctl name="AIF1ADC1 HPF Mode" val="0"/>
-        <ctl name="AIF1ADC1 HPF Switch" val="0"/>
+        <ctl name="Main Mic Switch" val="1"/>
+        <ctl name="MIXINL IN1L Switch" val="1"/>
+        <ctl name="AIF1ADC1 HPF Mode" val="1"/>
+        <ctl name="AIF1ADC1 HPF Switch" val="1"/>
         <ctl name="AIF2 Mode" val="Slave"/>
         <ctl name="AIF2DAC Mux" val="AIF2DACDAT"/>
     </path>
