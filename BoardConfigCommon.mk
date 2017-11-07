@@ -24,6 +24,9 @@ TARGET_NO_BOOTLOADER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := piranha
 
+# Binder API version
+TARGET_USES_64_BIT_BINDER := true
+
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/ti/omap4
 TARGET_KERNEL_CONFIG := espresso_defconfig
