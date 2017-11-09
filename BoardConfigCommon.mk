@@ -17,9 +17,6 @@
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
-# Build SGX KM
--include hardware/ti/omap4/pvr-km.mk
-
 TARGET_NO_BOOTLOADER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := piranha
@@ -32,6 +29,9 @@ BOARD_NAND_SPARE_SIZE := 128
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=espresso
+
+# Build SGX KM
+-include hardware/ti/omap4/pvr-km.mk
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
