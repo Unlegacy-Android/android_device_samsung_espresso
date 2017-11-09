@@ -22,6 +22,9 @@ TARGET_BOARD_OMAP_CPU := 4430
 # Include common omap4 makefile
 $(call inherit-product, hardware/ti/omap4/omap4.mk)
 
+# Build SGX KM
+$(call inherit-product, hardware/ti/omap4/pvr-km.mk)
+
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-common
 

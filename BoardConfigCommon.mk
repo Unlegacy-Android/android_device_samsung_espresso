@@ -17,9 +17,6 @@
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
-# Build SGX KM
--include hardware/ti/omap4/pvr-km.mk
-
 TARGET_NO_BOOTLOADER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := piranha
