@@ -17,9 +17,6 @@
 # Inherit common omap4 board config
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
-# Build SGX KM
--include hardware/ti/omap4/pvr-km.mk
-
 TARGET_NO_BOOTLOADER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := piranha
@@ -78,3 +75,8 @@ BOARD_SEPOLICY_DIRS += \
 RECOVERY_FSTAB_VERSION := 2
 TARGET_RECOVERY_FSTAB := device/samsung/espresso/rootdir/fstab.espresso
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+
+TARGET_BOARD_OMAP_CPU := 4430
+# Build SGX KM
+-include hardware/ti/omap4/pvr-km.mk
+
